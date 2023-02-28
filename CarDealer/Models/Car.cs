@@ -1,26 +1,36 @@
 using System.Collections.Generic;
 
-namespace ToDoList.Models
+namespace CarDealer.Models
 {
-  public class Item
+  public class Car
   {
-    // public string Description { get; set; }
-    // private static List<Item> _instances = new List<Item> { };
+    public string NickName { get; set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public string Color { get; set; }
+    public string Condition { get; set; }
+    public int Year { get; set; }
+    private static List<Car> _instances = new List<Car> { };
 
-    // public Item(string description)
-    // {
-    //   Description = description;
-    //   _instances.Add(this);
-    // }
+    public Car(string nickName, string make, string model, string color, string condition, int year)
+    {
+      NickName = nickName;
+      Make = make;
+      Model = model;
+      Color = color;
+      Condition = condition;
+      Year = year;
+      _instances.Add(this);
+    }
 
-    // public static List<Item> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Car> GetAll()
+    {
+      return _instances;
+    }
 
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
